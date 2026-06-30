@@ -98,7 +98,7 @@ typedef QueryResult ElunaQuery;
 #define ELUNA_LOG_ERROR(...)    ELUNA_LOG_AC_FMT(LOG_ERROR, __VA_ARGS__);
 #define ELUNA_LOG_DEBUG(...)    ELUNA_LOG_AC_FMT(LOG_DEBUG, __VA_ARGS__);
 #elif defined ELUNA_VMANGOS
-typedef std::shared_ptr<QueryNamedResult> ElunaQuery;
+typedef std::shared_ptr<QueryResult> ElunaQuery;
 #define ASSERT                  MANGOS_ASSERT
 #define ELUNA_LOG_INFO(...)     sLog.Out(LOG_ELUNA, LOG_LVL_BASIC,__VA_ARGS__);
 #define ELUNA_LOG_ERROR(...)    sLog.Out(LOG_ELUNA, LOG_LVL_ERROR,__VA_ARGS__);
@@ -108,7 +108,7 @@ typedef std::shared_ptr<QueryNamedResult> ElunaQuery;
 #define GetItemTemplate         GetItemPrototype
 #define GetTemplate             GetProto
 #else
-typedef std::shared_ptr<QueryNamedResult> ElunaQuery;
+typedef std::shared_ptr<QueryResult> ElunaQuery;
 #define ASSERT                  MANGOS_ASSERT
 #define ELUNA_LOG_INFO(...)     sLog.outString(__VA_ARGS__);
 #define ELUNA_LOG_ERROR(...)    sLog.outErrorEluna(__VA_ARGS__);
