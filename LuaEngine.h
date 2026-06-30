@@ -61,9 +61,7 @@ class SpellCastTargets;
 class Unit;
 class Weather;
 class WorldPacket;
-#if !defined ELUNA_AZEROTHCORE
 struct AreaTriggerEntry;
-#endif
 struct AuctionEntry;
 
 #if defined ELUNA_TRINITY || defined ELUNA_AZEROTHCORE
