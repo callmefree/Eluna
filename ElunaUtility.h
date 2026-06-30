@@ -20,6 +20,7 @@
 #include "Log.h"
 #if defined ELUNA_TRINITY 
 #include "QueryResult.h"
+#include "Errors.h"
 #else
 #include "Database/QueryResult.h"
 #endif
@@ -99,7 +100,7 @@ typedef QueryResult ElunaQuery;
 #define ELUNA_LOG_DEBUG(...)    ELUNA_LOG_AC_FMT(LOG_DEBUG, __VA_ARGS__);
 #elif defined ELUNA_VMANGOS
 typedef std::shared_ptr<QueryResult> ElunaQuery;
-#define ASSERT                  MANGOS_ASSERT
+// ASSERT is already defined by AzerothCore
 #define ELUNA_LOG_INFO(...)     sLog.Out(LOG_ELUNA, LOG_LVL_BASIC,__VA_ARGS__);
 #define ELUNA_LOG_ERROR(...)    sLog.Out(LOG_ELUNA, LOG_LVL_ERROR,__VA_ARGS__);
 #define ELUNA_LOG_DEBUG(...)    sLog.Out(LOG_ELUNA, LOG_LVL_DEBUG,__VA_ARGS__);
@@ -109,7 +110,7 @@ typedef std::shared_ptr<QueryResult> ElunaQuery;
 #define GetTemplate             GetProto
 #else
 typedef std::shared_ptr<QueryResult> ElunaQuery;
-#define ASSERT                  MANGOS_ASSERT
+// ASSERT is already defined by AzerothCore
 #define ELUNA_LOG_INFO(...)     sLog.outString(__VA_ARGS__);
 #define ELUNA_LOG_ERROR(...)    sLog.outErrorEluna(__VA_ARGS__);
 #define ELUNA_LOG_DEBUG(...)    sLog.outDebug(__VA_ARGS__);

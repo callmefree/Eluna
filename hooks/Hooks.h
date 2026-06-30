@@ -12,6 +12,7 @@
 #endif
 #include <utility>
 #include "Define.h"
+#include <cstddef>
 
 struct EventEntry
 {
