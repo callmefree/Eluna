@@ -62,7 +62,6 @@
 #endif
 #include "SpellInfo.h"
 #include "WeatherMgr.h"
-#include "AreaTrigger.h"
 #elif defined ELUNA_VMANGOS
 #include "BasicAI.h"
 #include "SQLStorages.h"
