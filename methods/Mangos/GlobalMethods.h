@@ -1903,7 +1903,7 @@ namespace LuaGlobalFunctions
             uint32 entry = E->CHECKVAL<uint32>(++i);
             uint32 amount = E->CHECKVAL<uint32>(++i);
 
-            ItemTemplate const* item_proto = ObjectMgr::GetItemPrototype(entry);
+            ItemTemplate const* item_proto = ObjectMgr::GetItemTemplate(entry);
             if (!item_proto)
             {
                 luaL_error(E->L, "Item entry %d does not exist", entry);

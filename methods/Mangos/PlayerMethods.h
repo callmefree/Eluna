@@ -2661,7 +2661,7 @@ namespace LuaPlayer
         // check item starting quest (it can work incorrectly if added without item in inventory)
         for (uint32 id = 0; id < sItemStorage.GetMaxEntry(); ++id)
         {
-            ItemPrototype const* pProto = sItemStorage.LookupEntry<ItemPrototype>(id);
+            ItemTemplate const* pProto = sItemStorage.LookupEntry<ItemTemplate>(id);
             if (!pProto)
                 continue;
 

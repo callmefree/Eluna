@@ -277,7 +277,7 @@ namespace LuaGlobalFunctions
     int GetItemTemplateEntry(Eluna* E)
     {
         uint32 entry = E->CHECKVAL<uint32>(1);
-        E->Push(eObjectMgr->GetItemPrototype(entry));
+        E->Push(eObjectMgr->GetItemTemplate(entry));
         return 1;
     }
 

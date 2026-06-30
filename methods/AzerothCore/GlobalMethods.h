@@ -1,3 +1,4 @@
+#include "ConfigMgr.h"
 /*
 * Copyright (C) 2010 - 2024 Eluna Lua Engine <https://elunaluaengine.github.io/>
 * This program is free software licensed under GPL version 3

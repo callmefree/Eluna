@@ -81,9 +81,9 @@ typedef AreaTrigger AreaTriggerEntry;
 #endif
 #else
 class InstanceData;
-struct ItemPrototype;
+struct ItemTemplate;
 struct SpellEntry;
-typedef ItemPrototype ItemTemplate;
+// ItemTemplate renamed to ItemTemplate in modern AC;
 typedef SpellEffectIndex SpellEffIndex;
 typedef SpellEntry SpellInfo;
 

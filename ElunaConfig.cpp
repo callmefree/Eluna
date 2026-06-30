@@ -6,6 +6,7 @@
 
 #if defined ELUNA_TRINITY || defined ELUNA_AZEROTHCORE
 #include "Config.h"
+#include "ConfigMgr.h"
 #else
 #endif
 #include "ElunaConfig.h"
@@ -54,35 +55,31 @@ void ElunaConfig::Initialize()
 void ElunaConfig::SetConfig(ElunaConfigBoolValues index, char const* fieldname, bool defvalue)
 {
 #if defined ELUNA_TRINITY
-    SetConfig(index, sConfigMgr->GetOption<bool>(fieldname, defvalue));
+    _configValues[index] = sConfigMgr->GetOption<bool>(fieldname, defvalue);
 #elif defined ELUNA_AZEROTHCORE
-    SetConfig(index, sConfigMgr->GetOption<bool>(fieldname, defvalue));
+    _configValues[index] = sConfigMgr->GetOption<bool>(fieldname, defvalue);
 #else
-    SetConfig(index, sConfigMgr->GetOption<bool>(fieldname, defvalue));
 #endif
 }
 
 void ElunaConfig::SetConfig(ElunaConfigStringValues index, char const* fieldname, std::string defvalue)
 {
 #if defined ELUNA_TRINITY
-    SetConfig(index, sConfigMgr->GetOption<std::string>(fieldname, defvalue));
+    _configValues[index] = sConfigMgr->GetOption<std::string>(fieldname, defvalue);
 #elif defined ELUNA_CMANGOS
-    SetConfig(index, sConfigMgr->GetOption<std::string>(fieldname, defvalue));
 #elif defined ELUNA_AZEROTHCORE
-    SetConfig(index, sConfigMgr->GetOption<std::string>(fieldname, defvalue));
+    _configValues[index] = sConfigMgr->GetOption<std::string>(fieldname, defvalue);
 #else
-    SetConfig(index, sConfigMgr->GetOption<std::string>(fieldname, defvalue.c_str()));
 #endif
 }
 
 void ElunaConfig::SetConfig(ElunaConfigUInt32Values index, char const* fieldname, uint32 defvalue)
 {
 #if defined ELUNA_TRINITY
-    SetConfig(index, sConfigMgr->GetOption<uint32>(fieldname, defvalue));
+    _configValues[index] = sConfigMgr->GetOption<uint32>(fieldname, defvalue);
 #elif defined ELUNA_AZEROTHCORE
-    SetConfig(index, sConfigMgr->GetOption<uint32>(fieldname, defvalue));
+    _configValues[index] = sConfigMgr->GetOption<uint32>(fieldname, defvalue);
 #else
-    SetConfig(index, sConfigMgr->GetOption<int>(fieldname, defvalue));
 #endif
 }
 

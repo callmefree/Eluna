@@ -106,7 +106,7 @@ typedef std::shared_ptr<QueryResult> ElunaQuery;
 #define ELUNA_LOG_DEBUG(...)    sLog.Out(LOG_ELUNA, LOG_LVL_DEBUG,__VA_ARGS__);
 #define GET_GUID                GetObjectGuid
 #define GetGameObjectTemplate   GetGameObjectInfo
-#define GetItemTemplate         GetItemPrototype
+#define GetItemTemplate         GetItemTemplate
 #define GetTemplate             GetProto
 #else
 typedef std::shared_ptr<QueryResult> ElunaQuery;
@@ -116,7 +116,7 @@ typedef std::shared_ptr<QueryResult> ElunaQuery;
 #define ELUNA_LOG_DEBUG(...)    sLog.outDebug(__VA_ARGS__);
 #define GET_GUID                GetObjectGuid
 #define GetGameObjectTemplate   GetGameObjectInfo
-#define GetItemTemplate         GetItemPrototype
+#define GetItemTemplate         GetItemTemplate
 #define GetTemplate             GetProto
 #endif
 

@@ -2399,10 +2399,10 @@ namespace LuaPlayer
             return 0;
 
         // check item starting quest (it can work incorrectly if added without item in inventory)
-        for (const auto& item : sObjectMgr.GetItemPrototypeMap())
+        for (const auto& item : sObjectMgr.GetItemTemplateMap())
         {
             uint32 i = item.first;
-            ItemPrototype const* pProto = &item.second;
+            ItemTemplate const* pProto = &item.second;
             if (!pProto)
                 continue;
 

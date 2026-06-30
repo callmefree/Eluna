@@ -21,7 +21,7 @@
 #if defined ELUNA_TRINITY || defined ELUNA_AZEROTHCORE
 #include "Define.h"
 #else
-#include "Platform/Define.h"
+#include "Define.h"
 #endif
 
 class Eluna;

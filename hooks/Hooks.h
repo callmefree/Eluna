@@ -8,7 +8,7 @@
 #define _HOOKS_H
 
 #if defined ELUNA_CMANGOS
-#include "Platform/Define.h"
+#include "Define.h"
 #endif
 #include <utility>
 #include "Define.h"
