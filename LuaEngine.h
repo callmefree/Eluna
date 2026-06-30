@@ -84,7 +84,7 @@ class InstanceData;
 struct ItemTemplate;
 struct SpellEntry;
 // ItemTemplate renamed to ItemTemplate in modern AC;
-typedef SpellEffectIndex SpellEffIndex;
+/* SpellEffectIndex is not used in modern AC */
 typedef SpellEntry SpellInfo;
 
 #if defined ELUNA_CMANGOS

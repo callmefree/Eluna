@@ -104,8 +104,6 @@ typedef std::shared_ptr<QueryResult> ElunaQuery;
 #define ELUNA_LOG_INFO(...)     sLog.Out(LOG_ELUNA, LOG_LVL_BASIC,__VA_ARGS__);
 #define ELUNA_LOG_ERROR(...)    sLog.Out(LOG_ELUNA, LOG_LVL_ERROR,__VA_ARGS__);
 #define ELUNA_LOG_DEBUG(...)    sLog.Out(LOG_ELUNA, LOG_LVL_DEBUG,__VA_ARGS__);
-#define GET_GUID                GetObjectGuid
-#define GetGameObjectTemplate   GetGameObjectInfo
 #define GetItemTemplate         GetItemTemplate
 #define GetTemplate             GetProto
 #else
@@ -114,10 +112,8 @@ typedef std::shared_ptr<QueryResult> ElunaQuery;
 #define ELUNA_LOG_INFO(...)     sLog.outString(__VA_ARGS__);
 #define ELUNA_LOG_ERROR(...)    sLog.outErrorEluna(__VA_ARGS__);
 #define ELUNA_LOG_DEBUG(...)    sLog.outDebug(__VA_ARGS__);
-#define GET_GUID                GetObjectGuid
-#define GetGameObjectTemplate   GetGameObjectInfo
-#define GetItemTemplate         GetItemTemplate
-#define GetTemplate             GetProto
+// GET_GUID is GetGUID() in modern AC (TrinityCore)
+#define GET_GUID                GetGUID
 #endif
 
 #if !defined MAKE_NEW_GUID
