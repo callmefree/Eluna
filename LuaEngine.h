@@ -82,10 +82,8 @@ typedef AreaTrigger AreaTriggerEntry;
 #else
 class InstanceData;
 struct ItemTemplate;
-struct SpellEntry;
-// ItemTemplate renamed to ItemTemplate in modern AC;
 /* SpellEffectIndex is not used in modern AC */
-typedef SpellEntry SpellInfo;
+// SpellInfo is the real type in modern AC, SpellEntry removed
 
 #if defined ELUNA_CMANGOS
 class TemporarySpawn;

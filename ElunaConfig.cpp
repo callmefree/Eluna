@@ -52,7 +52,7 @@ void ElunaConfig::Initialize()
     TokenizeAllowedMaps();
 }
 
-void ElunaConfig::SetConfig(ElunaConfigBoolValues /*index*/, char const* fieldname, bool defvalue)
+void ElunaConfig::SetConfig(ElunaConfigBoolValues index, char const* fieldname, bool defvalue)
 {
 #if defined ELUNA_TRINITY
     _configValues[index] = sConfigMgr->GetOption<bool>(fieldname, defvalue);
@@ -62,7 +62,7 @@ void ElunaConfig::SetConfig(ElunaConfigBoolValues /*index*/, char const* fieldna
 #endif
 }
 
-void ElunaConfig::SetConfig(ElunaConfigStringValues /*index*/, char const* fieldname, std::string defvalue)
+void ElunaConfig::SetConfig(ElunaConfigStringValues index, char const* fieldname, std::string defvalue)
 {
 #if defined ELUNA_TRINITY
     _configValues[index] = sConfigMgr->GetOption<std::string>(fieldname, defvalue);
@@ -73,7 +73,7 @@ void ElunaConfig::SetConfig(ElunaConfigStringValues /*index*/, char const* field
 #endif
 }
 
-void ElunaConfig::SetConfig(ElunaConfigUInt32Values /*index*/, char const* fieldname, uint32 defvalue)
+void ElunaConfig::SetConfig(ElunaConfigUInt32Values index, char const* fieldname, uint32 defvalue)
 {
 #if defined ELUNA_TRINITY
     _configValues[index] = sConfigMgr->GetOption<uint32>(fieldname, defvalue);
