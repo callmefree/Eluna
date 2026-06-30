@@ -6,7 +6,6 @@
 
 #if defined ELUNA_TRINITY || defined ELUNA_AZEROTHCORE
 #include "Config.h"
-#include "ConfigMgr.h"
 #else
 #endif
 #include "ElunaConfig.h"

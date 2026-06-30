@@ -77,7 +77,7 @@ typedef Battleground BattleGround;
 typedef BattlegroundTypeId BattleGroundTypeId;
 typedef InstanceScript InstanceData;
 #if defined ELUNA_AZEROTHCORE
-typedef AreaTrigger AreaTriggerEntry;
+// AreaTriggerEntry is the DBC struct in modern AC, no typedef needed
 #endif
 #else
 class InstanceData;
